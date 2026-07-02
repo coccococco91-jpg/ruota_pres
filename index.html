@@ -158,9 +158,11 @@ const prizes = [
 ] ;
 // pesi (1% + 9×11%)
 const weights = [1,11,11,11,11,11,11,11,11,11];
-
+let hasSpun = false;
 function spin(){
+if (hasSpun) return;
 
+hasSpun = true;
 const btn = document.getElementById("spinBtn");
 btn.disabled = true;
 btn.style.opacity = "0.5";
